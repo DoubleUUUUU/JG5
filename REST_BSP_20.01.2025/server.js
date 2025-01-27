@@ -16,6 +16,13 @@ app.get("/people",(req, res)=>{
     res.send(data);
 })
 
+
+
+app.post("/people", (req, res)=>{
+
+})
+
+
 app.listen(port,()=>{
    console.log("Server running on port: " + port) 
 }
