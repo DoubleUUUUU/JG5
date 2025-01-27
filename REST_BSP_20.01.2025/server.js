@@ -1,7 +1,9 @@
-const express = require("express")
-
+const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 const port = 3000;
 
 const data  = [
@@ -12,14 +14,17 @@ const data  = [
 ]
 
 
-app.get("/people",(req, res)=>{
-    res.send(data);
+app.get("/people/:id",(req, res)=>{
+   console.log(req.params.id)
+   res.send(data[id]);
 })
 
 
 
 app.post("/people", (req, res)=>{
+   data.push(req.body);
 
+   res.send(req.body);
 })
 
 
