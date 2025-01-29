@@ -11,21 +11,29 @@ const data  = [
    {name: "Michael", age: 20},
    {name: "Zoey", age: 19},
    {name: "Kimi", age: 43},
-]
+];
 
+
+app.get("/people/",(req, res)=>{
+   res.send(data);
+})
 
 app.get("/people/:id",(req, res)=>{
-   console.log(req.params.id)
+   let id = req.params.id;
    res.send(data[id]);
 })
 
-
+app.delete("/people/:id",(req,res) =>{
+   let id = req.params.id;
+   data.splice(id);
+   res.send("Done");
+})
 
 app.post("/people", (req, res)=>{
    data.push(req.body);
-
    res.send(req.body);
 })
+
 
 
 app.listen(port,()=>{
