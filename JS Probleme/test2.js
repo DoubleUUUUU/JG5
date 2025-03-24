@@ -22,6 +22,6 @@ module.exports = {
   };
   
   //Problem: Hier müssen viele Konfigurationen vorgenommen werden, 
-  // um Webpack und Babel richtig zu integrieren. 
+  // um Webpack und Babel richtig einzuführen. 
   // Für ein einfaches Projekt kann dies schnell überwältigend werden und zu Fehlern führen, 
   // wenn nicht alle Details korrekt konfiguriert sind.

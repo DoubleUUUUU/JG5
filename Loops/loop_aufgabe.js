@@ -122,7 +122,7 @@ for (let i = array.length - 1; i >= 0; i--) {
     reversearray.push(array[i]);
 }
 console.log(reversearray);
-
+//umwandeln in string
 /*
 • Sum the digits of a number
 Write a loop that sums all the digits of a given number (e.g., for 123, the sum is 1 + 2 + 3 = 6).

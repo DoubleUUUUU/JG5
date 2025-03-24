@@ -3,7 +3,7 @@ export interface Motor {
     hp: number;
   }
   
-  interface Car {
+  export interface Car {
     name: string;
     type: string;
     color: string;
